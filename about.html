@@ -6,34 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/style.css" rel="stylesheet">
 		 <link rel="stylesheet" type="" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script>
-			function fot(){
-				a=0;
-				if(a.lenght==0){
-					document.querySelector('input').innerHTML=' please complete the form';
-				}else{
-
-
-				document.querySelector('input').innerHTML=' thank you';
-				}
-				
-			}
-			document.addEventListener('DOMContentLoaded', function(){
-					document.querySelector('form').onsubmit =function(){
-					const na=	document.querySelector('#name').value;
-					alert(`Thank, ${na} for submission `);
-			};
-			});
-				document.querySelector('button').onclick =function(){
-					
-					alert(`Thank, ${na} for submission `);
-			}
-			
-		</script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+		
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 		<style>
 body{
-	background:#ffffff;
+	background-color: #fff;
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
@@ -41,14 +20,14 @@ body{
 } 
 .container{
 	width:100%;
-	background-image:url(image1.jpg);
-	background-image:cover;
+		
+
 	
 }
-.head{
+#head{
 	margin-left:15px;
-	width:100%;
-	height:220px;
+	width:80%;
+	height:120px;
 	border-radius:8px;
 	border:2px solid #fff;
 	background:#fff;
@@ -56,18 +35,23 @@ body{
 	align-items:center;
 	text-align:center;
 	align-content:center;
+	margin-left:10%;
 	
 }
-.head h2{
+.head:hover{
+	background:#dede;
+}
+#head h2{
 	
 	font-weight:400;
 	font-size:30px;
 	color:red;
 }
-.right{
+#right-one{
 	display:flex;
-	width:20%;
-	height:60%;
+
+	width:80%;
+	height:100%;
 	border-radius:8px;
 	border:2px solid #fff;
 	background:#fff;
@@ -83,149 +67,213 @@ body{
     align-items:center;
 	margin-left:80px;
 }
-.right.img-one {
-	position:absolute;
-	width:20%;
-	height:60%;
-}
-.right.img-one img{
-	position:absolute;
+
+#img-one{
 	width:100%;
 	height:100%;
-}
-.nav{
+	background:url(new1.jpeg);
+	background-size:100% ;
+	animation:slide 20s linear infinite;
 	
+
+}
+
+@keyframes slide{
+	0%{
+		background:url(new1.jpeg);
+		width:100%;
+		height:100%;
+		background-repeat:no-repeat;
+	}
+	25%{
+		background:url(new2.jpeg);
+		background-repeat:no-repeat;
+		width:100%;
+		height:100%;
+
+	}
+	50%{
+		background:url(new2.jpeg);
+		width:100%;
+		height:100%;
+		background-repeat:no-repeat;
+
+	}
+	75%{
+		background:url(new5.jpeg);
+		width:100%;
+		height:100%;
+		background-repeat:no-repeat;
+
+	}
+	100%{
+		background:url(new5.jpeg);
+		width:100%;
+		height:100%;
+	}
+	
+}
+
+#nav{
+	display:flex;
 	margin-left:15px;
 	width:100%;
-	height:80%;
-	background:linear-gradient(black,#000065);
+	height:30%;
+	background:navy;
 	text-align:center;
 	align-content:center;
-	margin-top:120px;
  }
- .nav h1{
-	color:#fff;
-	
-	margin-left:15px;
-	font-family:arial;
-	font-size:28px;
- }
- .nav li{
+ #nav h1{
 	color:#fff;
 	margin-top:50px;
-	margin-left:10px;
+	margin-left:5px;
+	font-family:arial;
+ }
+ #nav li a{
+	color:#fff;
+	margin-top:50px;
+	margin-left:8px;
 	margin-right:40px;
  }
- .nav h3{
-		color:#fff;
-	}
-	#h{
-		margin-top:20px;
-		top:180px;
-	}
+.logo{
 
+	
+	margin-left:5px;
+	margin-top:25px;
+}
 .logo {
 	width:10%;
-	 height:35%;
-	
-	 margin-left: 20px auto;
+	 height:15%;
+	 margin:10px auto;
+	 margin-left:10%;
 }
-.link ul{
-	list-style:none;
-	display:flex;
+#link ul{
+display:inline-flex;
+margin-top:20px;
+margin-right:20px;
+
 }
 
-.h{
-width:80%;
-height:150px;
-background:linear-gradient(85deg,green,red);
-display:flex;
+#link ul li{
+	list-style:none;
+	margin:6px;
+	
+}
+#link ul li i{
+	display:inline;
+	color:#fff;
+	margin: 5px auto;
+}
+#link ul li a:hover{
+	background:#aaa;
+}
+
+#h{
+width:100%;
+height:580px;
+background:#fff;
+border:1px solid #ccc;
+display:block;
 align-items:center;
 margin-top:80px;
 margin-left:20px;
 border-radius:2%;
 }
-.h p{
+#h p{
 	color:#fff;
-	margin-left:10px;
+	margin-left:25px;
 }
-.t{
+#t span:hover{
+	background:red;
+	font-size:20px;
+}
+#left-one{
+	
+	width:100%;
+	height:250px ;
+	border:1px solid #ccc;
+	border:2px 2px 2px 2px red;
+	margin-bottom:40px;
+	margin-top:40px;
+}
+
+#t{
+	
 	width :50%;
 	height:80%;
 	margin-left:5px;
+	margin:30px auto;
+	margin-top:20px;
+	margin-bottom:20px;
 }
-.t {
-	font-family:arial;
+#t p{
+	font-family:sans-serif;
 	font-size:20px;
 	font-weight: 400;
-
+	
 }
-.r{
+#h h5{
+	color:#fff;
+font-family:arial;
+	font-size:20px;
+	font-weight: 400;
+}
+#r{
   color:red;
 }
-.h2{
+#h2{
 margin-top:5px;
   color: red;
 }
-.mg{
+#mg{
+	
 	margin-top:100px;
- 	margin:right;
+ 	
 }
 
 
-.hi{
+#hi{
 	width:120px;
 	height:60px;
 	background: green;
 	
 	color:red;
 }
-.f{
+#f{
 	display:flex;
 	background:red;
 	width: 100%;
-	height:150px;
+	height:180px;
+	margin-bottom:20px;
+	top:150px;
 	
 }
-.foot-right{
-	margin-left: 250px;
+#foot-left{
+	width:220px;
 }
-.foot-right p{
+#foot-left i{
+	margin-right:10px;
+	margin-left:10px;
+	color:navy;
+}
+#foot-left li a{
+	margin-left:20px;
 	color:#fff;
 }
-
-.mm{
-	margin-left:-210px;
-	border-radius:50%;
-	margin-top:9px;
+#foot-right{
+	margin-left: 250px;
 }
-.m{
-	margin-left:500px;
-	border-radius:50%;
-	margin-top:-200px;
+#foot-right p{
+	color:#fff;
 }
-@media screen and (max-width:375px){
-	.head{
-		width:100%;
-	}
-	.m,.mm{
-		display:none;
-		margin-left:205px;
-		margin-top:-250px;
-	}
-	.head h2 {
-		font-size:30px;
-	}
-	.nav h3{
-		color:#fff;
-	}
-	
-	.nav h1{
-		font-size:18px;
-		text-align:center;
-		
-		margin-top:40px;
-	}
+#last{
+	width:150px;
+	display:flex;
+	margin-top:20px;
+	margin-left:30px;
+}
+#last ul i{
+	color :white;
 }
 </style>
 	</head>
@@ -233,88 +281,82 @@ margin-top:5px;
 <body>
 <div class='container'>
 	
+<div class="container">
+  
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="home.html">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="contac.html">1</a></li>
+    <li class="page-item active"><a class="page-link" href="index.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="about.html">3</a></li>
+   
+  </ul>
+</div>
 
-<div class='head' class='row'>
-<img class='mm' src="image1.jpg" alt=""  width='10%' height='50%'>
-<img class="logo" src= "/static/academy.png">
+<div id='head'>
 <h2><span style=' color:green'>Datduos</span> Soccer <span  style=' color:#000'>Academy</span></h2>
-<img class='m' src="img (11).jpg" alt=""  width='10%' height='50%'>
-<hr style=' color:green'>
-<hr style=' color:red'>
+<p class='text-center'>The Young Shall Grow</p>
+<hr style='color:green'>
+<hr style='color:red'>
 
-<div class='nav'>
-	<h1 id='h'>THE YOUNG SHALL GROW</h1>
-	<h3>Trianing and  developing the youth through soccer</h3>
-		<!--
-		<div class='link'>
-			<ul>
-				<li>Home</li>
-				<li>Contact</li>
-				<li>About Us</li>
-				<li>User</li>
-
-			</ul>
-			<hr style=' color:green'>
-		</div>
-		<hr style=' color:red'>
-</div>
--->
+	
 
 </div>
-<hr style=' color:red; width:80%; background:green; height:red'>
-<hr style=' color:#fff; width:80%; background:green; height:red'>
-<fieldset>
-	
-		<div class='form-header'>
-			<h3>Contact Us</h3>
-			<label for="first-name">Full  Name: <input id="name" type="text" required /></label>
-        <label for="last-name"> Phone: <input id="phone"  type="text" required /></label>
-        <label for="email"> Email: <input id="email"  type="email" required /></label>
-		<a type="button" class="btn btn-primary" href="mailto:isaacokyere4@gmail.com?subject=mail to datduos soccer academy>submit" style='width:230px; height:110px; text-decolration:none; background:orange;'>send</a>
 
-		</div>
-	
-</fieldset>
-<!--
-<div class='right'>
-	 <div class='img-one'>
-    <h3></h3>
-    <span></span>
-    <img src="im.jpg" alt="" width='50%' height='70%'>
+
+<form action="" style='margin:20px 0 20px 20px'>
+<p class=text-center>Register with us</p>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="col">
+        <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+      </div>
     </div>
-     <div class='img-two'>
-    <h3></h3>
-    <span></span>
-    <img src="img (9).jpg" alt="" width='50%' height='70%'>
-    </div>
-	 <div class='img-three'>
-    <h3></h3>
-    <span></span>
-    <img src="img (2).jpg" alt="" width='50%' height='70%'>
-    </div>
-	
-       
+    <a href='mailto:datduosfuture19@gmail.com?subject:register with us' type="submit" class="btn btn-primary mt-3">Submit</a>
+  </form>
 </div>
--->
+ <div class="row">
+  <div class="col-sm-3"><a href="">Email</a></div>
+  <div class="col-sm-3"><a href="">Location</a></div>
+  <div class="col-sm-3"><a href="">Blog</a></div>
+  <div class="col-sm-3"><a href=""></a></div>
+</div> 
+	 
 
-<img class="mg" src="img (11).jpg" width='100%' >
-<footer class="f" width='120px' height='120px' >
-<div class='foot-left'>
-	<p>Quick link</p>
+
+  
+<footer class="row" style='width:100%;  background:#eee; margin-top:20px' >
+<div class='col-sm-4'>
+	<p style='margin-left:40px; margin-top:20px'>Quick link</p>
 	<ul style='list-style:none'>
-		<li><i class='fa fa-home' style='margin-left:5px'></i><a href="home.html"  style='margin-left:15px; text-decoration:none'>Home</a></li>
-		<li><i class='fa fa-mobile' style='margin-left:5px'></i><a href="contact.html"  style='margin-left:15px; text-decoration:none'>Contact</a></li>
-		<li><i class='fa fa-phone' style='margin-left:5px'></i><a href="about.html"  style='margin-left:15px; text-decoration:none'>About Us</a></li>
-		<li><i class='fa fa-envelope' style='margin-left:5px'></i><a href="mail.html"  style='margin-left:15px; text-decoration:none'>mail:datduosfutures19@gmail.com</a></li>
+		<li><i class='fa fa-home' style='margin-left:5px;list-style:none'></i><a href="home.html"  style='margin-left:15px; text-decoration:none'>Home</a></li>
+		<li><i class='fa fa-mobile' style='margin-left:15px'></i><a href="contact.html"  style='margin-left:15px; text-decoration:none'>Contact</a></li>
+		<li><i class='fa fa-phone' style='margin-left:20px'></i><a href="about.html"  style='margin-left:15px; text-decoration:none'>About Us</a></li>
+		<li><i class='fa fa-envelope' style='margin-left:-5px'></i><a href="mail.html"  style='margin-left:15px; text-decoration:none'>mail</a></li>
 		
 	</ul>
 </div>
-<div class='foot-right'>
+<div class="col-sm-4" style='margin-top:20px'>
+
 <p>Address</p>
 	<p>Location:Suhum-Nankese, Agyeikrom</p>
 	<p>Eastern-Region-Ghana</p>
+	<p>contact:+233208337919/554397963</p>
 </div>
+<div class="col-sm-4"style='color:navy;list-style:none;margin-top:20px'>
+<ul class='nav'>
+	<a href="https://www.facebook.com/profile.php?id=100093966854945&mibextid=ZbWKwL" ><li class='nav-item'><i class='fa fa-facebook' style='list-style:none; margin-left:10px;margin-right:10px'></i></a></li>
+	<a href=""><li class='nav-item'><i class='fa fa-twitter' style='list-style:none;margin-right:10px'></i></li></a>
+	<a href=""><li class='nav-item'><i class='fa fa-instagram' style='list-style:none;margin-right:10px'></i></li></a>
+	<a href=""><li class='nav-item'><i class='fa fa-envelope' style='list-style:none;margin-right:10px'></i></li></a>
+</ul>
+</div>
+
 </footer >
+<div class="text-center"> 
+	copy-right-2023 Design by Zion@soft
+</div>
 </div>
 </body>
 </html>
